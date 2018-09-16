@@ -93,3 +93,19 @@ The TagUs system brings together:
 #### Futures
 
 [TBD]
+
+### Use cases
+
+Samantha is growing blackberries and is picked 15Kg today. She opens TagUs on the phone and announces that she has 15Kg of blackberries available to sell at a price. The phone gathers geo-location and account information and sends to the blockchain.
+
+George is looking for blackberries for a desert and needs 1Kg. He opens TagUs on the phone and searches for blackberries in a 5Km radius. Samantha pops up and George checks the price. He thinks it’s a good deal and makes a reservation for 1Kg of Samantha’s blackberries. After a couple of hours, he reaches Samantha’s selling spot and concludes the transaction.
+
+------------
+
+Margarida makes artistic birthday cakes, so she opens TagUs on her phone and instructs that to the application. Also that it should be ordered 2 days in advance and the price. Patricia wants to celebrate her child’s birthday, so she looks in TagUs and finds that Margarida supplies cakes in her area. Patricia orders a cake several days in advance. At the day Patricia picks it up, the transaction is complete and the cake is automatically payed.
+
+------------
+
+Samantha wants to change her product from blackberries to strawberries, but doesn’t know how the market will accept it and she needs investment to make this change. She opens TagUs and specify her intentions to grow 100Kg of strawberries next year and waits for investors.
+
+Nathan has a local market in town and knows that strawberries are a good selling product, but scarce and pricy. He wants to do a good deal, so he opens TagUs and is happy to see that nearby, Samantha is willing to grow strawberries next year and since she’s getting investment for it, she’s willing to make reserves at a lower price. Nathan reserves 50Kg of strawberries for next year.
