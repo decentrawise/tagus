@@ -7,11 +7,11 @@ const config = require('../config.json');
 mongoose.connect(config.database);
 
 // Initialise QTUM blockchain connection
-const repoData = require("./solar.development.json");
+const repoData = require("../solar.development.json");
 const qtum = new Qtum("http://qtum:test@localhost:3889", repoData);
 
 // Load contract information
-const contract = qtum.contract("contracts/TagUsTransaction.sol");
+const contract = qtum.contract("../contracts/TagUsTransaction.sol");
 
 // Listen to events of type OfferPublished
 contract.onLog((entry) => {
