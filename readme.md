@@ -74,23 +74,22 @@ The TagUs system brings together:
         * Category
         * Location
 3. Purchase:
-Instant - Consumer goes directly to provider to purchase:
-Provider post is deducted of the purchased units
-Consumer pays in the app for purchased amount to provider
-Provider receives a notification of payment issued
-Provider receives a notification of payment confirmation
-Scheduled - Consumer schedules pickup or delivery
-Provider post is deducted of purchased units marked reserved. The reservation is valid for X days
-Consumer selects pickup or delivery and pays in the app for purchased amount and delivery (optional) to the contract
-At the time of pickup or delivery, the consumer has to check-in with a QR code provided by the provider, thus enabling the accept and reject operations. This check-in operation is only available during a reservation validity.
-Accept - The product is picked-up and the consumer accepts the product. The amount that is standing in the contract is transferred to the provider and the transaction is completed
-Rejected - The product is not satisfying, so the consumer rejects it without paying any fee
-Expiry - After the reservation period expires:
-Pickup - The provider or the consumer can cancel it and the provider keeps the cancellation fee for no pickup
+    * Instant - Consumer goes directly to provider to purchase:
+        * Provider post is deducted of the purchased units
+        * Consumer pays in the app for purchased amount to provider
+        * Provider receives a notification of payment issued
+        * Provider receives a notification of payment confirmation
+    * Scheduled - Consumer schedules pickup or delivery
+        * Provider post is deducted of purchased units marked reserved. The reservation is valid for X days
+        * Consumer selects pickup or delivery and pays in the app for purchased amount and delivery (optional) to the contract
+        * At the time of pickup or delivery, the consumer has to check-in with a QR code provided by the provider, thus enabling the accept and reject operations. This check-in operation is only available during a reservation validity.
+        * Accept - The product is picked-up and the consumer accepts the product. The amount that is standing in the contract is transferred to the provider and the transaction is completed
+        * Rejected - The product is not satisfying, so the consumer rejects it without paying any fee
+        * Expiry - After the reservation period expires:
+            * Pickup - The provider or the consumer can cancel it and the provider keeps the cancellation fee for no pickup
+            * Delivery - The consumer or the provider can cancel it and the consumer keeps the cancellation fee for no delivery
+        * Cancelled - During the reservation period, any of the parties can cancel the purchase, but a cancellation fee is paid to the other party.
 
-Delivery - The consumer or the provider can cancel it and the consumer keeps the cancellation fee for no delivery
-Cancelled - During the reservation period, any of the parties can cancel the purchase, but a cancellation fee is paid to the other party.
-
-Futures
+#### Futures
 
 [TBD]
