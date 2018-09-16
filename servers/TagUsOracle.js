@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Qtum = require('qtumjs').Qtum;
 const Offer = require('./models/Offer');
-const config = require('./config.json');
+const config = require('../config.json');
 
 // Connect to the mongodb database
 mongoose.connect(config.database);
