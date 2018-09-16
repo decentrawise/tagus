@@ -5,7 +5,7 @@ This project is work in progress... It is our entry for the QTUM Hackathon 2018.
 ### Why the name 'TagUs'
 
 TagUs comes from Tagus (the river in Lisbon). Both developers of this project are from Lisbon and the Tagus river divides them since
-each lives on opposite margins. So the development of this project involved lots os crossings of the Tagus river, and mainly by
+each lives on opposite margins. So the development of this project involved lots of crossings of the Tagus river, and mainly by
 internet conferences, since this is 21st century, but the river was there anyway playing it's part in the communication. So we decided
 to give it a place in the project by naming it on it's behalf.
 
