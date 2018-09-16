@@ -1,0 +1,22 @@
+{
+  "name": "tagus",
+  "version": "0.1.0",
+  "description": "TagUs Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decentrawise/tagus.git"
+  },
+  "author": "DecentraWise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decentrawise/tagus/issues"
+  },
+  "homepage": "https://github.com/decentrawise/tagus#readme",
+  "dependencies": {
+    "qtumjs": "^1.9.1"
+  }
+}

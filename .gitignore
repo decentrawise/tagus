@@ -1,0 +1,18 @@
+# Generic
+.DS_Store
+.placeholder
+
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+
+# Package managers
+yarn.lock
+package-lock.json
+
+# Generated
+build
+dist
