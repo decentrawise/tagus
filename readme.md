@@ -38,10 +38,10 @@ The TagUs system brings together:
 * Interesting workflow that makes sure that everyone is incentivized to behave in the best way possible
 * Guaranty that the product/service is received and the price paid or otherwise penalizations for the infringing part apply
 
-### workflow
+### Workflow
 
 #### Transaction
-* Publish - Provider publishes his offers to the platform:
+1. Publish - Provider publishes his offers to the platform:
     * Offer:
         * Location:
             * Latitude
@@ -59,21 +59,21 @@ The TagUs system brings together:
         * Availability - until when this offer is available
         * Pickup - Can this offer be picked up
         * Pickup reservation period
-Delivery - Can this offer be delivered
-Delivery distance
-Delivery reservation period
-Publishing fee - there is a minimum defined by us and the provider can agree to pay more to appear higher in the lists
-Cancellation fee - between 10% and 50%
-Discovery:
-Search - Consumer searches for available products/services by:
-Keywords in title
-Category
-Location
-Watch - Consumer gets notifications about selected products/services when available by:
-Keywords in title
-Category
-Location
-Purchase:
+        * Delivery - Can this offer be delivered
+        * Delivery distance
+        * Delivery reservation period
+        * Publishing fee - there is a minimum defined by us and the provider can agree to pay more to appear higher in the lists
+        * Cancellation fee - between 10% and 50%
+2. Discovery:
+    * Search - Consumer searches for available products/services by:
+        * Keywords in title
+        * Category
+        * Location
+    * Watch - Consumer gets notifications about selected products/services when available by:
+        * Keywords in title
+        * Category
+        * Location
+3. Purchase:
 Instant - Consumer goes directly to provider to purchase:
 Provider post is deducted of the purchased units
 Consumer pays in the app for purchased amount to provider
