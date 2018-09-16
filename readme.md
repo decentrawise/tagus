@@ -5,8 +5,8 @@ This project is work in progress... It is our entry for the QTUM Hackathon 2018.
 ### Why the name 'TagUs'
 
 TagUs comes from Tagus (the river in Lisbon). Both developers of this project are from Lisbon and the Tagus river divides them since
-each lives on opposite margins. So the development of this project involved lots of crossings of the Tagus river, and mainly by
-internet conferences, since this is 21st century, but the river was there anyway playing it's part in the communication. So we decided
+each lives on opposite margins. So the development of this project involved lots of crossings of the Tagus river (mainly by
+internet conferences, since we're in the 21st century already), but the river was there anyway playing it's part in the communication. So we decided
 to give it a place in the project by naming it on it's behalf.
 
 ### Requirements
@@ -20,14 +20,23 @@ to give it a place in the project by naming it on it's behalf.
 
 ### The Problem
 
-Most of the time the providers of some product or service have to rely on third-party services to share their works, get requests,
-schedule deliveries or pickups and finally the payment processor or bank that all together cause extreme friction on this process
-that should be easy to accomplish. The QTUM blockchain is ideal to implement this workflow and remove all this friction.
+Most of the times, product or service providers need to rely on third-party services (suppliers, transports, orders, etc) to have their job done. In the end, the client needs to be satisfied, but also the provider needs to be happy. 
+A lot can happen along this line, like misunderstandings, payment delays and sometimes, even no payments at all.
+QTum blockchain is a great platform to bring some agility and peace of mind to this workflow.
 
 ### The Solution
 
-TagUs is a system to facilitate local trust-less business activities between neighbors or more distant people, preventing abuse or payment issues.
-Also, it will allow in the future for the providers to get funding for their projects from the crowd, by selling futures over their productions...
+TagUs makes your life a lot easier by making sure your business and your relations go smoothly, preventing abusive commercial relations and payment issues.
+In the future, we want to enable funding for providers, so they can develop their projects, selling futures over their products.
+
+### What TagUs offers
+
+* Smart-contracts that guarantee smooth trading of products and services to everybody from the provider to the consumer
+* Exposure to the providers by displaying them on searches
+* Search engine connects local providers to local consumers
+* Search and notification facilities for everyone who wants to know about a service or product
+* Allow to make product or service reservations (secure the product until I get there or order it home)
+* Allow consumers to invest on new future product developments in the area
 
 ### The Technology
 
@@ -36,32 +45,30 @@ The TagUs system brings together:
 * QTUM Smart Contracts for mediation and escrow
 * Geo location on Blockchain through an Oracle export to MongoDB
 * Interesting workflow that makes sure that everyone is incentivized to behave in the best way possible
-* Guaranty that the product/service is received and the price paid or otherwise penalizations for the infringing part apply
+* Guaranty that the product/service is traded at the arranged price, otherwise compensations are taken from the infringing party
 
 ### Workflow
 
 #### Transaction
+1. Create Provider Profile - Fill in some details from you as a product supplier:
+    * profile:
+        * Name
+        * Address
+        * Contact
+        * Location (latitude and longitude)
+        * Delivery (if can deliver, the distance and delivery period)
+
 1. Publish - Provider publishes his offers to the platform:
     * Offer:
-        * Location:
-            * Latitude
-            * Longitude
-            * Address
-            * Contact
         * Title
-        * Foto
         * Description
         * Category
+        * Foto
         * Units available
             * Quantity
             * Unit
         * Unit price
         * Availability - until when this offer is available
-        * Pickup - Can this offer be picked up
-        * Pickup reservation period
-        * Delivery - Can this offer be delivered
-        * Delivery distance
-        * Delivery reservation period
         * Publishing fee - there is a minimum defined by us and the provider can agree to pay more to appear higher in the lists
         * Cancellation fee - between 10% and 50%
 2. Discovery:
