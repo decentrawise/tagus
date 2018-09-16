@@ -1,13 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import MapView from 'react-native-maps';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <MapView
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+        <Text>Welcome to TagUs App</Text>
       </View>
     );
   }
