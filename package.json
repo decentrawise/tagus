@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/decentrawise/tagus#readme",
   "dependencies": {
+    "mongoose": "^5.2.15",
     "qtumjs": "^1.9.1"
   }
 }
