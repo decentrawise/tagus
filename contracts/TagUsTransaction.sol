@@ -30,7 +30,7 @@ contract TagUsTransaction {
     string category;        //  Category which this product belongs
     string description;     //  Text description of the product
     string photoURL;        //  URL for a photo description of the product
-    uint16 expirationBlock; //  Last block that this offer is available
+    uint256 expirationBlock; //  Last block that this offer is available
 
     //  Supply
     uint32 quantity;
@@ -68,17 +68,24 @@ contract TagUsTransaction {
       
   }
   
+  event ProfilePublished(address providerAddr, string providerName, string streetAddress, string contact, uint32 longitude, uint32 latitude);
+  event OfferPublished(address providerAddr, string providerName, string title, string category, uint256 expirationBlock, uint32 longitude, uint32 latitude);
 
   //  TODO: All the contract functions are using way too much gas, so this requires 
   //  TODO: We need a good identification of the users (providers and consumers) to pass as method parameters
   
   function registerProfile(string name, string streetAddress, string contact, uint32 latitude, uint32 longitude) public {
-        Provider memory provider = Provider( msg.sender, name, streetAddress, contact, latitude, longitude,
-                                             Delivery(true, 10, 50),
-                                             Pickup(true, 60),
-                                             0
-                                           );
-        providers[msg.sender] = provider;
+      
+    assert(providers[msg.sender].id == address(0));
+      
+    Provider memory provider = Provider( msg.sender, name, streetAddress, contact, latitude, longitude,
+                                         Delivery(true, 10, 50),
+                                         Pickup(true, 60),
+                                         0
+                                       );
+    providers[msg.sender] = provider;
+        
+    emit ProfilePublished(provider.id, provider.name, provider.streetAddress, provider.contact, provider.longitude, provider.latitude);
 
   }
   
@@ -87,14 +94,18 @@ contract TagUsTransaction {
     //  TODO: validate the existance of the provider...for now, assume it exists
     Provider storage provider = providers[msg.sender];
     
+    assert(provider.id != address(0));
+    
     Offer memory offer = Offer( provider.lastOfferId,
-                                title, "<category>", description, "http://someimage.png", 60,   //  Product details
+                                title, "<category>", description, "http://someimage.png", now + 600,   //  Product details
                                 quantity, "kg", 100,
                                 10, 10
                               );
     
     provider.offers[provider.lastOfferId] = offer;
     provider.lastOfferId++;
+    
+    emit OfferPublished(provider.id, provider.name, offer.title, offer.category, offer.expirationBlock, provider.longitude, provider.latitude);
     
     return offer.id;
 
@@ -106,10 +117,7 @@ contract TagUsTransaction {
     Provider storage provider = providers[providerId];
     Offer storage offer = provider.offers[offerId];
     
-    if(offer.id == 0) {
-        //  TODO: throw 'Offer doesn't exist''
-        return;
-    }
+    assert(offer.id == 0);
     
     delete provider.offers[offerId];    //  Avoid reentrancy
     
@@ -171,10 +179,7 @@ contract TagUsTransaction {
     Offer storage offer = provider.offers[offerId];
     Reserve memory pickup = offer.pickups[msg.sender];
     
-    if( pickup.consumer == address(0) ) {
-        //  Throw error 'Pickup not found';
-        return;
-    }
+    assert( pickup.consumer != address(0) );
     
     delete offer.pickups[msg.sender];   //  Avoid reentrancy
     
@@ -185,5 +190,4 @@ contract TagUsTransaction {
     
   }
   
-
 }
