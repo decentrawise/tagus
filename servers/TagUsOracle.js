@@ -11,13 +11,13 @@ const repoData = require("../solar.development.json");
 const qtum = new Qtum("http://qtum:test@localhost:3889", repoData);
 
 // Load contract information
-const contract = qtum.contract("../contracts/TagUsTransaction.sol");
+const contract = qtum.contract("contracts/TagUsTransaction.sol");
 
 // Listen to events of type OfferPublished
 contract.onLog((entry) => {
   const event = entry.event;
 
-  console.log('received:', entry.event);
+  console.log('received:', event);
 
   if (event.type === 'OfferPublished') {
 
