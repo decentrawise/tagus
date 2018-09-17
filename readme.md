@@ -2,6 +2,11 @@
 
 This project is work in progress... It is our entry for the QTUM Hackathon 2018.
 
+Check our full presentation: https://decentrawise.github.io/tagus
+
+Our pitch video:
+https://www.youtube.com/watch?v=oGKK1TF7QxM
+
 ### Why the name 'TagUs'
 
 TagUs comes from Tagus (the river in Lisbon). Both developers of this project are from Lisbon and the Tagus river divides them since
